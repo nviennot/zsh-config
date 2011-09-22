@@ -1,0 +1,17 @@
+
+alias s="cd .."
+alias rm="rm -i"
+alias mv="mv -i"
+alias cp="cp -i"
+
+LS=`which gls`
+if [ -z "$LS" ]; then
+	LS=`which ls`
+fi
+LS_isgnu=`$LS --version 2>/dev/null | grep GNU`
+if [ ! -z "$LS_isgnu" ]; then
+	alias ls="$LS --color=auto"
+fi
+
+unset LS
+unset LS_isgnu
