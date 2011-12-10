@@ -24,7 +24,7 @@ export CUSTOM_ENV_DIR=$HOME/.env.d
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git github git-flow cap gem lol zsh-syntax-highlighting)
+plugins=(git github git-flow cap gem lol zsh-syntax-highlighting bundler heroku)
 
 source /etc/profile
 source $ZSH/oh-my-zsh.sh
@@ -52,7 +52,8 @@ if [[ -x `which hitch` ]]; then
 	hitch
 fi
 
-alias nogit="disable_git_prompt_info"
+alias nogit="disable_git_prompt_info; compdef -d git"
+alias nog="nogit"
 
 PATH=~/bin/:$PATH
 
