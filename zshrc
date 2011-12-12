@@ -55,7 +55,7 @@ fi
 alias nogit="disable_git_prompt_info; compdef -d git"
 alias nog="nogit"
 
-PATH=~/bin/:$PATH
+PATH="~/bin/:/opt/local/bin:$PATH"
 
 # customize the environment a bit
 function source_dir() {
