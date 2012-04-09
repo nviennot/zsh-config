@@ -53,7 +53,7 @@ if [[ -x `which hitch` ]]; then
 fi
 
 alias nogit="disable_git_prompt_info; compdef -d git"
-alias nog="nogit"
+alias nog="compdef -d git"
 
 export PATH="$HOME/bin:/opt/local/bin:$PATH"
 
