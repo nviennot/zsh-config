@@ -79,5 +79,5 @@ source_dir "$CUSTOM_ENV_DIR"
 source_dir "$ZSH/env.d"
 
 if [ ! -z "$USE_TMUX" ]; then
-	[[ "$TERM" != "screen-256color-bce" ]] && exec tmux -q -2
+	[[ "$TERM" != "screen-256color-bce" && "$TERM" != "screen-256color" ]] && exec tmux -q -2
 fi
