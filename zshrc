@@ -78,6 +78,6 @@ function source_dir() {
 source_dir "$CUSTOM_ENV_DIR"
 source_dir "$ZSH/env.d"
 
-if [ ! -z "$USE_TMUX" ]; then
+if [ ! -z "$USE_TMUX" -a -z "$SSH_CONNECTION" ]; then
 	[[ "$TERM" != "screen-256color-bce" && "$TERM" != "screen-256color" ]] && exec tmux -q -2
 fi
