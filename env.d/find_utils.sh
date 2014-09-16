@@ -55,7 +55,7 @@ __fif() {
 		# -s: ignore non-existent/unreadable files
 		# -I: ignore binary files
 		# -n: output line numbers
-		grep -sInR --exclude-dir '.git' --color=always $GREP
+		grep -sInR --exclude-dir '.git' --color=always $GREP_ARGS $PAT $DIR
 		DIR=$1
 		shift
 	done
