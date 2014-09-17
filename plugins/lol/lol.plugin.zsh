@@ -1,7 +1,7 @@
 # LOL!!1
 # Source: http://aur.archlinux.org/packages/lolbash/lolbash/lolbash.sh
 
-alias wtf='dmesg'
+alias wtf='syslog -B -w'
 alias onoz='cat /var/log/errors.log'
 alias rtfm='man'
 
@@ -29,7 +29,7 @@ alias iminurbase='finger'
 alias btw='nice'
 alias obtw='nohup'
 
-alias nomz='ps -aux'
+alias nomz='ps -ex'
 alias nomnom='killall'
 
 alias byes='exit'
