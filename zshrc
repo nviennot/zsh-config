@@ -24,7 +24,7 @@ export CUSTOM_ENV_DIR=$HOME/.env.d
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git cap lol zsh-syntax-highlighting osx extract history-substring-search svn vi-mode)
+plugins=(git cap lol zsh-syntax-highlighting osx extract svn vi-mode)
 
 source /etc/profile
 source $ZSH/oh-my-zsh.sh
@@ -33,8 +33,8 @@ unsetopt nomatch
 
 #bindkey "\e[H" beginning-of-line
 #bindkey "\e[F" end-of-line
-bindkey "\e[1;5D" backward-word
-bindkey "\e[1;5C" forward-word
+#bindkey "\e[1;5D" backward-word
+#bindkey "\e[1;5C" forward-word
 
 alias noh="unsetopt sharehistory"
 
