@@ -1,7 +1,8 @@
-[submodule "plugins/zsh-syntax-highlighting"]
-	path = plugins/zsh-syntax-highlighting
-	url = git://github.com/zsh-users/zsh-syntax-highlighting.git
 [submodule "plugins/opp"]
 	path = plugins/opp
 	url = https://github.com/hchbaw/opp.zsh.git
+	branch = master
+[submodule "plugins/zsh-syntax-highlighting"]
+	path = plugins/zsh-syntax-highlighting
+	url = git://github.com/zsh-users/zsh-syntax-highlighting.git
 	branch = master
