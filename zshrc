@@ -24,7 +24,7 @@ export CUSTOM_ENV_DIR=$HOME/.env.d
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git github git-flow cap gem lol zsh-syntax-highlighting bundler heroku)
+plugins=(git cap lol zsh-syntax-highlighting osx extract history-substring-search svn vi-mode)
 
 source /etc/profile
 source $ZSH/oh-my-zsh.sh
