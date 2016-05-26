@@ -10,3 +10,4 @@ function gi() {
 	fi
 }
 
+zstyle ':completion:*:*:git:*' script ~/.oh-my-zsh/plugins/git/git_bash_completion.sh
