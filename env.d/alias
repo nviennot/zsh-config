@@ -3,7 +3,7 @@ alias s="cd .."
 alias rm="rm -i"
 alias mv="mv -i"
 alias cp="cp -i"
-alias tmux="tmux -2"
+alias tmux="tmux -2u"
 
 LS=`which gls`
 if [ -z "$LS" ]; then
