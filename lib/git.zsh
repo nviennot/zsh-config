@@ -183,8 +183,11 @@ function git_prompt_status() {
   if $(echo "$INDEX" | grep '^## [^ ]\+ .*diverged' &> /dev/null); then
     STATUS="$ZSH_THEME_GIT_PROMPT_DIVERGED$STATUS"
   fi
-  if [ -z "$STATUS" ]; then
-	  STATUS="$(parse_git_dirty)"
+  # if nothing else is there in the status - use a clean/dirty indicator
+  local re
+  re='^[ ]*$'
+  if [[ $STATUS =~ $re ]]; then
+    STATUS="$(parse_git_dirty)$STATUS"
   fi
   echo $STATUS
 }
