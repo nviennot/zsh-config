@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Introduction
 =============
 
@@ -16,6 +15,7 @@ Installation (afrojer)
     chsh -s `which zsh`
 
 
+RobbyRussell's README
 =============
 <p align="center">
   <img src="https://s3.amazonaws.com/ohmyzsh/oh-my-zsh-logo.png" alt="Oh My Zsh">
