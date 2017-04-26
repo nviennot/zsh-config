@@ -2,12 +2,11 @@ function toon {
   echo -n ""
 }
 
-get_git_dirty() { 
+get_git_dirty() {
   git diff --quiet || echo '*'
 }
 
 autoload -Uz vcs_info
-autoload -U colors && colors
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' unstagedstr '%F{red}*'   # display this when there are unstaged changes
 zstyle ':vcs_info:*' stagedstr '%F{yellow}+'  # display this when there are staged changes
@@ -18,9 +17,12 @@ zstyle ':vcs_info:*' formats       \
 zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{3}%r'
 zstyle ':vcs_info:*' enable git cvs svn
 
-precmd () {
+theme_precmd () {
     vcs_info
 }
 
 setopt prompt_subst
 PROMPT='%{$fg[magenta]%}$(toon)%{$reset_color%} %~/ %{$reset_color%}${vcs_info_msg_0_}%{$reset_color%}'
+
+autoload -U add-zsh-hook
+add-zsh-hook precmd theme_precmd
