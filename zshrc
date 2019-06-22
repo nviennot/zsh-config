@@ -42,7 +42,7 @@ DISABLE_AUTO_UPDATE="true"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -68,11 +68,41 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git vim zsh-syntax-highlighting)
 
 source /etc/profile
 source $ZSH/oh-my-zsh.sh
+
+ZSH_HIGHLIGHT_STYLES+=(
+  default                       'none'
+  unknown-token                 'fg=red,bold'
+  reserved-word                 'fg=yellow'
+  alias                         'fg=none,bold'
+  builtin                       'fg=none,bold'
+  function                      'fg=none,bold'
+  command                       'fg=none,bold'
+  hashed-command                'fg=none,bold'
+  path                          'fg=cyan'
+  globbing                      'fg=cyan'
+  history-expansion             'fg=blue'
+  single-hyphen-option          'fg=magenta'
+  double-hyphen-option          'fg=magenta'
+  back-quoted-argument          'fg=magenta,bold'
+  single-quoted-argument        'fg=green'
+  double-quoted-argument        'fg=green'
+  dollar-double-quoted-argument 'fg=cyan'
+  back-double-quoted-argument   'fg=cyan'
+  assign                        'fg=yellow'
+)
+
 export EDITOR=vim
+
+alias ←="pushd -q -1"
+alias →="pushd -q +0"
+alias ↑="cd .."
+bindkey -s '^u' "↑\n"
+bindkey -s '^b' "←\n"
+bindkey -s '^f' "→\n"
 
 alias noh="unsetopt sharehistory"
 alias nogit="disable_git_prompt_info; compdef -d git"

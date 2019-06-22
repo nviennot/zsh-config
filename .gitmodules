@@ -1,0 +1,6 @@
+[submodule "plugins/vim"]
+	path = plugins/vim
+	url = https://github.com/nviennot/zsh-vim-plugin.git
+[submodule "plugins/zsh-syntax-highlighting"]
+	path = plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
