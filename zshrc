@@ -105,7 +105,7 @@ bindkey -s '^b' "←\n"
 bindkey -s '^f' "→\n"
 
 alias noh="unsetopt sharehistory"
-alias nogit="disable_git_prompt_info; compdef -d git"
+alias nogit="git config --add oh-my-zsh.hide-status 1"
 alias nog="nogit"
 
 alias npm_bin='PATH=`pwd`/node_modules/.bin:$PATH; rehash'
